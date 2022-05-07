@@ -11,17 +11,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"/>
   </head>
-  <body onscroll="onScroll()">
-    <nav class="">
+  <body onscroll="onScroll()" class="">
+    <nav id="nav" class="">
       <div class="wrapper">
         <a href="#" class="logo"><span>Eyebrows</span><span>Manu</span></a>
 
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 20H30" stroke="#5e3cc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10 12H30" stroke="#5e3cc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M18 28L30 28" stroke="#5e3cc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-        
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">Início</a>
+            </li>
+            <li>
+              <a href="#">Sobre</a>
+            </li>
+            <li>
+              <a href="#">Serviços</a>
+            </li>
+          </ul>
+
+          <a href="#" class="button">Agende seu horário</a>
+
+          <ul class="socials">
+            <li>
+              <a href="#" target="_blank"><img src="./assets/instagram.svg" alt="Ícone do Instagram"></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><img src="./assets/facebook.svg" alt="Ícone do Facebook"></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><img src="./assets/youtube.svg" alt="Ícone do YouTube"></a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="open-menu" onclick="Menu.open()">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20H30" stroke="#5e3cc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 12H30" stroke="#5e3cc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 28L30 28" stroke="#5e3cc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="close-menu" onclick="Menu.close()">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
+        </button>
       </div>
     </nav>
     <header class="wrapper">
