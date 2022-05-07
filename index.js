@@ -14,3 +14,13 @@ const Menu = {
         document.body.classList.remove('show-menu')
     }
 }
+
+ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 750,
+}).reveal(`
+    #home, #home img, #home .stats,
+    #services header, #services .card,
+    #about, #about header, #about .content
+`)
