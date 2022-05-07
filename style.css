@@ -22,6 +22,10 @@
   font-size: 62.5%; 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -33,12 +37,18 @@ body {
   text-align: center;
 
   overflow: overlay;
+  
+  background-color: var(--white);
 }
 
 .wrapper {
   width: 37.5rem;
   margin-inline: auto;
   padding-inline: 2.4rem;
+}
+
+section {
+  padding-block: 10rem;
 }
 
 a {
@@ -96,11 +106,11 @@ nav.scroll {
 }
 
 nav.scroll .logo span {
-  color: var(--white);
+  color: #fff;
 }
 
 nav.scroll svg path{
-  stroke: var(--white);
+  stroke: #fff;
 }
 
 /* =-=-=-=-=-=-=-=-=-= Show menu =-=-=-=-=-=-=-=-=-= */
@@ -111,6 +121,11 @@ body.show-menu {
 
 body.show-menu > :not(nav) {
   display: none;
+}
+
+.menu {
+  transform: translateY(-100%);
+  transition: transform 0.5s;
 }
 
 .menu,
@@ -131,7 +146,8 @@ body.show-menu .menu {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;  
+  height: 100vh; 
+  transform: translateY(0); 
 
   padding-top: var(--nav-height);
 
@@ -149,11 +165,11 @@ body.show-menu nav button {
 }
 
 body.show-menu .logo span {
-  color: var(--white);
+  color: #fff;
 }
 
 body.show-menu nav button svg path{
-  stroke: var(--white);
+  stroke: #fff;
 }
 
 .menu ul:first-child {
@@ -169,11 +185,11 @@ body.show-menu nav button svg path{
   font-weight: 700;
   line-height: 3.1rem;
   font-size: 2.4rem;
-  color: var(--white);
+  color: #fff;
 }
 
 .menu .button {
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: 4rem;
 
   font-weight: 700;
@@ -195,13 +211,13 @@ body.show-menu nav button svg path{
   gap: 3.2rem;
 }
 
-/* =-=-=-=-=-=-=-=-=-= Header =-=-=-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-=-=-= Home =-=-=-=-=-=-=-=-=-= */
 
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
-header::before {
+#home::before {
   content: '';
   display: block;
   width: 100%;
@@ -215,13 +231,13 @@ header::before {
   z-index: -1;
 }
 
-header h4 {
+#home h4 {
   font-size: 1.4rem;
   color: var(--dark-color);
   margin-bottom: 1.6rem;
 }
 
-header h1 {
+#home h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
@@ -229,7 +245,7 @@ header h1 {
   margin-bottom: 2.4rem;
 }
 
-header p {
+#home p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
@@ -238,7 +254,7 @@ header p {
   margin-bottom: 3.2rem;
 }
 
-header button {
+#home button {
   background: var(--primary-color);
 
   border: none;
@@ -249,7 +265,7 @@ header button {
   height: 6.2rem;
   width: 26.3rem;
 
-  color: white;
+  color: #fff;
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -262,14 +278,14 @@ header button {
   margin-inline: auto;
 }
 
-header > img {
+#home > img {
   display: block;
   width: 26.4rem;
   margin-inline: auto;
   object-position: 0 2rem;
 }
 
-header .stats {
+#home .stats {
   width: 32.7rem;
   padding: 4rem 0;
   margin-inline: auto;
@@ -285,7 +301,7 @@ header .stats {
   gap: 6rem;
 } 
 
-header .stats .stat h3 {
+#home .stat h3 {
   font-size: 4.8rem;
   color: var(--headline);
   line-height: 130%;
@@ -293,9 +309,62 @@ header .stats .stat h3 {
   margin-bottom: .4rem;
 }
 
-header .stats .stat p {
+#home .stat p {
   margin: 0;
   color: var(--primary-color);
   font-weight: 2.4rem;
 }
+
+/* =-=-=-=-=-=-=-=-=-= Services =-=-=-=-=-=-=-=-=-= */
+
+#services header {
+  margin-bottom: 6rem;
+}
+
+#services header h4 {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  color: var(--primary-color);
+
+  margin-bottom: 1.6rem;
+}
+
+#services header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--headline);
+}
+
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
+  padding: 2.4rem;
+
+  text-align: left;
+
+  background-color: #fff;
+  border: 1px solid var(--primary-light-2);
+  border-radius: .6rem;
+}
+
+#services .card h3 {
+  font-size: 2.4rem;
+  color: var(--headline);
+  line-height: 3.1rem;
+
+  margin-block: 1.6rem;
+}
+
+#services .card p {
+  line-height: 150%;
+  color: var(--paragraph);
+}
+
+
 

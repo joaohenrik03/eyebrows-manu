@@ -14,18 +14,18 @@
   <body onscroll="onScroll()" class="">
     <nav id="nav" class="">
       <div class="wrapper">
-        <a href="#" class="logo"><span>Eyebrows</span><span>Manu</span></a>
+        <a href="#home" class="logo"><span>Eyebrows</span><span>Manu</span></a>
 
         <div class="menu">
           <ul>
             <li>
-              <a href="#">Início</a>
+              <a onclick="Menu.close()" href="#home">Início</a>
+            </li>
+            <li>
+              <a onclick="Menu.close()" href="#services">Serviços</a>
             </li>
             <li>
               <a href="#">Sobre</a>
-            </li>
-            <li>
-              <a href="#">Serviços</a>
             </li>
           </ul>
 
@@ -58,12 +58,18 @@
         </button>
       </div>
     </nav>
-    <header class="wrapper">
-      <h4>BOAS-VINDAS A EYEBROWS MANU 👋</h4>
-      <h1>Design de sobrancelhas</h1>
+
+    <header id="home" class="wrapper">
+      <h4>
+        BOAS-VINDAS A EYEBROWS MANU 👋
+      </h4>
+      <h1>
+        Design de sobrancelhas
+      </h1>
       <p>
         Aqui você será tratada como uma princesa, desde a marcação até a finalização de sua sobrancelha.
       </p>
+
       <button>
         <svg
           width="20"
@@ -103,6 +109,45 @@
         </div>
       </section>
     </header>
+
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h4>Serviços</h4>
+          <h2>Como podemos ajudá-la(o) a deixar sua sobrancelha impecável?</h2>
+        </header>
+
+        <div class="cards">
+          <div class="card">
+            <img src="./assets/check.svg" alt="Ícone de confirmação">
+            <h3>
+              Design
+            </h3>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./assets/check.svg" alt="Ícone de confirmação">
+            <h3>
+              Henna
+            </h3>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./assets/check.svg" alt="Ícone de confirmação">
+            <h3>
+              Limpeza
+            </h3>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="./index.js"></script>
   </body>
