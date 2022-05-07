@@ -125,7 +125,7 @@ body.show-menu > :not(nav) {
 
 .menu {
   transform: translateY(-100%);
-  transition: transform 0.5s;
+  transition: transform 0.4s;
 }
 
 .menu,
