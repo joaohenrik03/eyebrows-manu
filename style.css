@@ -86,6 +86,34 @@ section .content p {
   line-height: 150%;  
 }
 
+.button {
+  background: var(--primary-color);
+
+  border: none;
+  border-radius: 4rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  margin-bottom: 6rem;
+
+  transition: background .2s;
+}
+
+.button:hover {
+  background-color: var(--dark-color);
+}
+
 a {
   text-decoration: none;
 }
@@ -236,6 +264,12 @@ body.show-menu nav button svg path{
   margin-bottom: 8rem;
 }
 
+.menu .button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    filter: brightness(1.2);
+}
+
 .socials {
   display: flex;
   align-items: center;
@@ -272,27 +306,7 @@ body.show-menu nav button svg path{
   margin-bottom: 3.2rem;
 }
 
-#home button {
-  background: var(--primary-color);
-
-  border: none;
-  border-radius: 4rem;
-
-  margin-bottom: 6rem;
-
-  height: 6.2rem;
-  width: 26.3rem;
-
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-
+#home .button {
   margin-inline: auto;
 }
 
@@ -362,7 +376,7 @@ body.show-menu nav button svg path{
 }
 
 #about img {
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 /* =-=-=-=-=-=-=-=-=-= About =-=-=-=-=-=-=-=-=-= */
@@ -379,4 +393,84 @@ body.show-menu nav button svg path{
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+/* =-=-=-=-=-=-=-=-=-= Contact =-=-=-=-=-=-=-=-=-= */
+
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact .content ul li {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+#contact .content ul li:first-child {
+  margin-bottom: 1.6rem;
+}
+
+#contact .button {
+  margin-top: 3.2rem;
+}
+
+/* =-=-=-=-=-=-=-=-=-= Footer =-=-=-=-=-=-=-=-=-= */
+
+footer {
+  background-color: var(--primary-color);
+
+  text-align: left;
+
+  padding-block: 6rem;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+
+  font-size: 4rem;
+}
+
+footer .logo span {
+  color: #fff;
+}
+
+footer svg path{
+  stroke: #fff;
+}
+
+footer p {
+  color: var(--primary-light-2);
+  line-height: 2;
+
+  margin-bottom: 3.2rem;
+}
+
+footer .socials {
+  justify-content: flex-start;
+}
+
+/* =-=-=-=-=-=-=-=-=-= Back to Top =-=-=-=-=-=-=-=-=-= */
+
+#backToTop {
+  position: fixed;
+  right: 3rem;
+  bottom: 1rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: .2s;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
