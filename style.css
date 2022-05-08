@@ -43,7 +43,7 @@ body {
 }
 
 .wrapper {
-  width: 37.5rem;
+  width: min(50rem, 100%);
   margin-inline: auto;
   padding-inline: 2.4rem;
 }
@@ -129,7 +129,7 @@ nav {
   display: flex;
 
   height: var(--nav-height);
-  width: 100vw;
+  width: 100%;
 
   position: fixed;
   top: 0;
@@ -154,6 +154,11 @@ nav .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+nav .menu,
+nav .close-menu {
+position: fixed;
 }
 
 nav button {
@@ -211,7 +216,6 @@ body.show-menu .close-menu {
 }
 
 body.show-menu .menu {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -321,7 +325,7 @@ body.show-menu nav button svg path{
 }
 
 #home .stats {
-  width: 32.7rem;
+  width: 100%;
   padding: 4rem 0;
   margin-inline: auto;
 
