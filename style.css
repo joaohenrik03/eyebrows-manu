@@ -289,6 +289,7 @@ body.show-menu nav button svg path{
 /* =-=-=-=-=-=-=-=-=-= Home =-=-=-=-=-=-=-=-=-= */
 
 #home {
+  padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-height));
 }
 
@@ -296,7 +297,7 @@ body.show-menu nav button svg path{
   content: '';
   display: block;
   width: 100%;
-  height: calc(72% - var(--nav-height));
+  height: calc(76% - var(--nav-height));
 
   background-color: var(--primary-light);
 
@@ -537,6 +538,23 @@ footer .socials {
     overflow: auto;
   }
 
+  section {
+    padding-block: 16rem;
+  }
+
+  section h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  .col-a {
+    grid-area: A;
+  }
+
+  .col-b {
+    grid-area: B;
+  }
+
   /* =-=-=-=-=-=-=-=-=-= Navigation =-=-=-=-=-=-=-=-=-= */
 
   nav#nav .logo span {
@@ -663,7 +681,7 @@ footer .socials {
   /* =-=-=-=-=-=-=-=-=-= Home =-=-=-=-=-=-=-=-=-= */
 
   #home::before {
-    height: calc(86% - var(--nav-height));
+    height: calc(96% - var(--nav-height));
   }
 
   #home {
@@ -719,4 +737,38 @@ footer .socials {
     flex: 1;
   }
 
+  /* =-=-=-=-=-=-=-=-=-= Services =-=-=-=-=-=-=-=-=-= */
+
+  #services h2 {
+    max-width: 47rem;
+    margin-inline: auto;
+  }
+
+  #services .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  #services .card {
+    width: 30%;
+    flex: 1;
+  }
+
+  /* =-=-=-=-=-=-=-=-=-= About =-=-=-=-=-=-=-=-=-= */
+
+  #about .wrapper {
+    display: grid;
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.7rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content p {
+    margin-bottom: 0;
+  }
 }
