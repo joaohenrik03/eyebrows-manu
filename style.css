@@ -7,10 +7,11 @@
 }
 
 :root {
-  --dark-color: hsl(255, 68%, 31%);
-  --primary-color: hsl(255, 53%, 50%);
-  --primary-light: hsl(257, 100%, 93%);
-  --primary-light-2: hsl(252, 100%, 97%);
+  --hue: 255;
+  --dark-color: hsl(var(--hue), 68%, 31%);
+  --primary-color: hsl(var(--hue), 53%, 50%);
+  --primary-light: hsl(calc(var(--hue) + 2), 100%, 93%);
+  --primary-light-2: hsl(calc(var(--hue) - 3), 100%, 97%);
   
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
@@ -159,6 +160,10 @@ nav button {
   border: 0;
   background: none;
   cursor: pointer;
+}
+
+nav svg path {
+  stroke: var(--primary-color);
 }
 
 /* =-=-=-=-=-=-=-=-=-= Navigation On Scroll =-=-=-=-=-=-=-=-=-= */
@@ -375,6 +380,14 @@ body.show-menu nav button svg path{
   margin-block: 1.6rem;
 }
 
+#services .card circle {
+  fill: var(--primary-light);
+}
+
+#services .card path {
+  stroke: var(--primary-color);
+}
+
 #about img {
   border-radius: 1rem;
 }
@@ -413,6 +426,9 @@ body.show-menu nav button svg path{
 
 #contact .content ul li:first-child {
   margin-bottom: 1.6rem;
+}
+#contact li path {
+  stroke: var(--primary-color);
 }
 
 #contact .button {
@@ -473,4 +489,8 @@ footer .socials {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+#backToTop circle {
+  fill: var(--primary-color);
 }
